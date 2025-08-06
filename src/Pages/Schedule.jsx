@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import ProgramRoster from "../components/ProgramRooster/ProgramRoster";
 import CleaningRoster from "../components/CleaningRoster/CleaningRoster";
 import TeachersRoster from "../components/TeacherRoster/TeachersRoster.jsx"
@@ -59,12 +60,11 @@ export default function Schedule() {
           🔄 Regenerate
         </button>
 
-        <button
-      onClick={() => window.location.href = '/add-child'}
+      <Link to="add-child"><button
       className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 ml-4 rounded-md"
     >
       ➕ Register Child
-    </button>
+    </button></Link> 
             
         </div>
         
