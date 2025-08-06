@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export default function Register(){
+export default function AddChild(){
 
     const [childName, setChildName] = useState("");
   const [children, setChildren] = useState([]);
