@@ -10,6 +10,7 @@ import Schedule from "./Pages/Schedule";
 import AddChild from "./Pages/AddChild";
 import QuizPage from "./Pages/QuizPage";
 import Games from "./Pages/Games";
+import NotFound from "./Pages/NotFound";
 // import StoryDetails from "./Pages/StoryDetails"; // Uncomment later when you create this page
 
 export default function App() {
@@ -23,6 +24,7 @@ export default function App() {
         <Route path="/add-child" element={<AddChild />} />
         <Route path="/quiz" element={<QuizPage />} />
         <Route path="/games" element={<Games />} />
+        <Route path="*" element={<NotFound />} /> {/* Catch-all */}
         {/* <Route path="/story/:id" element={<StoryDetails />} /> */}
       </Routes>
     </Router>
