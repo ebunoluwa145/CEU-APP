@@ -60,7 +60,7 @@ export default function Schedule() {
           🔄 Regenerate
         </button>
 
-      <Link to="add-child"><button
+      <Link to="/add-child"><button
       className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 ml-4 rounded-md"
     >
       ➕ Register Child
