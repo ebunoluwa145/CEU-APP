@@ -52,7 +52,7 @@ export default function Navbar() {
 
       {/* Mobile Dropdown */}
       {isOpen && (
-  <ul className="md:hidden flex flex-col items-center space-y-4 py-6 bg-orange-100 text-gray-700 font-semibold px-4">
+  <ul className="md:hidden flex flex-col bg-orange-100 text-gray-700 font-medium divide-y divide-orange-300">
     <li className="hover:text-orange-500 flex items-center gap-2">
       <BookOpen size={18} />
       <Link to="/bible-stories">Bible Stories</Link>

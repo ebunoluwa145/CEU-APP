@@ -16,14 +16,23 @@ export default function Home(){
         <div>
             <HeroSection/>
 
-            <div className="relative -mt-12 flex justify-center gap-6">
-                <Link to="/bible-stories"><Card icon={<FaBookOpen />} title="Bible Stories" bgColor="bg-indigo-700" onClick={() => navigate("/bible-stories")} /></Link>  
-                <Link to="/games"><Card icon={<FaGamepad />} title="Games" bgColor="bg-purple-600" onClick={() => navigate("/games")} /></Link>
-                <Link to="/quiz"><Card icon={<FaQuestionCircle />} title="Quiz" bgColor="bg-blue-600" onClick={() => navigate("/quiz")} /></Link>
-                <Link to="/schedule"><Card icon={<FaCalendarAlt />} title="Schedule" bgColor="bg-teal-600" onClick={() => navigate("/schedule")} /></Link>
-                
-                
-            </div>
+            <div className="relative -mt-12 grid grid-cols-2 gap-4 sm:gap-6 place-items-center md:flex md:justify-center">
+                <Link to="/bible-stories">
+                    <Card className="w-18 sm:w-22 md:w-40" icon={<FaBookOpen />} title="Bible Stories" bgColor="bg-indigo-700" />
+                </Link>  
+                <Link to="/games">
+                    <Card className="w-18 sm:w-22 md:w-40" icon={<FaGamepad />} title="Games" bgColor="bg-purple-600" />
+                </Link>
+                <Link to="/quiz">
+                    <Card className="w-18 sm:w-22 md:w-40" icon={<FaQuestionCircle />} title="Quiz" bgColor="bg-blue-600" />
+                </Link>
+                <Link to="/schedule">
+                    <Card className="w-18 sm:w-22 md:w-40" icon={<FaCalendarAlt />} title="Schedule" bgColor="bg-teal-600" />
+                </Link>
+                </div>
+
+
+
             
             <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
             <BibleStoriesPreview />
