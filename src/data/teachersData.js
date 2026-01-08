@@ -1,42 +1,81 @@
 const teachersRosterData = [
-    // JULY
-    { month: "July", date: "6/7/2025", teacher1: "Sis Ogunjobi", teacher2: "Sis Oloruntoba" },
-    { month: "July", date: "13/7/2025", teacher1: "Dcn Adu", teacher2: "Sis Esther" },
-    { month: "July", date: "20/7/2025", teacher1: "Sis Ebun", teacher2: "Sis Tosin" },
-    { month: "July", date: "27/7/2025", teacher1: "Dcns Oloniyo", teacher2: "Sis Olusoji" },
-  
-    // AUGUST
-    { month: "August", date: "3/8/2025", teacher1: "Dcns Aromashodu", teacher2: "Sis Esther" },
-    { month: "August", date: "10/8/2025", teacher1: "Sis Ogunbowale", teacher2: "Sis Ogunjobi" },
-    { month: "August", date: "17/8/2025", teacher1: "Dcn Adu", teacher2: "Sis Oloruntoba" },
-    { month: "August", date: "24/8/2025", teacher1: "Sis Olusoji", teacher2: "Sis Ebun" },
-    { month: "August", date: "31/8/2025", teacher1: "Dcns Oloniyo", teacher2: "Sis Tosin" },
-  
-    // SEPTEMBER
-    { month: "September", date: "7/9/2025", teacher1: "Sis Ogunbowale", teacher2: "Sis Olusoji" },
-    { month: "September", date: "14/9/2025", teacher1: "Sis Esther", teacher2: "Sis Oloruntoba" },
-    { month: "September", date: "21/9/2025", teacher1: "Dcns Aromashodu", teacher2: "Sis Ebun" },
-    { month: "September", date: "28/9/2025", teacher1: "Sis Ogunjobi", teacher2: "Dcns Oloniyo" },
-  
-    // OCTOBER
-    { month: "October", date: "5/10/2025", teacher1: "Dcns Aromashodu", teacher2: "Sis Olusoji" },
-    { month: "October", date: "12/10/2025", teacher1: "Sis Esther", teacher2: "Sis Tosin" },
-    { month: "October", date: "19/10/2025", teacher1: "Sis Oloruntoba", teacher2: "Sis Ogunbowale" },
-    { month: "October", date: "26/10/2025", teacher1: "Sis Ogunjobi", teacher2: "Sis Ebun" },
-  
-    // NOVEMBER
-    { month: "November", date: "2/11/2025", teacher1: "Dcns Oloniyo", teacher2: "Sis Ogunbowale" },
-    { month: "November", date: "9/11/2025", teacher1: "Dcn Adu", teacher2: "Sis Esther" },
-    { month: "November", date: "16/11/2025", teacher1: "Dcns Aromashodu", teacher2: "Sis Oloruntoba" },
-    { month: "November", date: "23/11/2025", teacher1: "Sis Olusoji", teacher2: "Sis Ebun" },
-    { month: "November", date: "30/11/2025", teacher1: "Dcns Oloniyo", teacher2: "Sis Tosin" },
-  
-    // DECEMBER
-    { month: "December", date: "7/12/2025", teacher1: "Sis Olusoji", teacher2: "Sis Ogunjobi" },
-    { month: "December", date: "14/12/2025", teacher1: "Dcns Aromashodu", teacher2: "Dcns Oloniyo" },
-    { month: "December", date: "21/12/2025", teacher1: "Sis Esther", teacher2: "Sis Tosin" },
-    { month: "December", date: "28/12/2025", teacher1: "Dcn Adu", teacher2: "Sis Oloruntoba" },
-  ];
+
+    // JANUARY 2026
+    { month: "January", date: "4/1/2026", teacher1: "Dcns Oloniyo", teacher2: "Sis Ogunjobi" },
+    { month: "January", date: "11/1/2026", teacher1: "Sis Oloruntoba", teacher2: "Dcn Adu" },
+    { month: "January", date: "18/1/2026", teacher1: "Sis Esther", teacher2: "Sis Ebun" },
+    { month: "January", date: "25/1/2026", teacher1: "Sis Tosin", teacher2: "Sis Olusoji" },
+
+    // FEBRUARY 2026
+    { month: "February", date: "1/2/2026", teacher1: "Dcns Aromashodu", teacher2: "Sis Ogunbowale" },
+    { month: "February", date: "8/2/2026", teacher1: "Dcns Oloniyo", teacher2: "Sis Esther" },
+    { month: "February", date: "15/2/2026", teacher1: "Sis Ogunjobi", teacher2: "Sis Tosin" },
+    { month: "February", date: "22/2/2026", teacher1: "Dcn Adu", teacher2: "Sis Ebun" },
+
+    // MARCH 2026
+    { month: "March", date: "1/3/2026", teacher1: "Sis Oloruntoba", teacher2: "Sis Olusoji" },
+    { month: "March", date: "8/3/2026", teacher1: "Dcns Aromashodu", teacher2: "Sis Ogunbowale" },
+    { month: "March", date: "15/3/2026", teacher1: "Dcns Oloniyo", teacher2: "Sis Ogunjobi" },
+    { month: "March", date: "22/3/2026", teacher1: "Sis Esther", teacher2: "Sis Ebun" },
+    { month: "March", date: "29/3/2026", teacher1: "Sis Tosin", teacher2: "Dcn Adu" },
+
+    // APRIL 2026
+    { month: "April", date: "5/4/2026", teacher1: "Sis Olusoji", teacher2: "Dcns Aromashodu" },
+    { month: "April", date: "12/4/2026", teacher1: "Sis Oloruntoba", teacher2: "Sis Ogunbowale" },
+    { month: "April", date: "19/4/2026", teacher1: "Dcns Oloniyo", teacher2: "Sis Ebun" },
+    { month: "April", date: "26/4/2026", teacher1: "Sis Ogunjobi", teacher2: "Sis Esther" },
+
+    // MAY 2026
+    { month: "May", date: "3/5/2026", teacher1: "Dcn Adu", teacher2: "Sis Tosin" },
+    { month: "May", date: "10/5/2026", teacher1: "Sis Olusoji", teacher2: "Dcns Aromashodu" },
+    { month: "May", date: "17/5/2026", teacher1: "Sis Ogunbowale", teacher2: "Sis Oloruntoba" },
+    { month: "May", date: "24/5/2026", teacher1: "Dcns Oloniyo", teacher2: "Sis Ebun" },
+    { month: "May", date: "31/5/2026", teacher1: "Sis Ogunjobi", teacher2: "Sis Esther" },
+
+    // JUNE 2026
+    { month: "June", date: "7/6/2026", teacher1: "Dcn Adu", teacher2: "Sis Tosin" },
+    { month: "June", date: "14/6/2026", teacher1: "Sis Olusoji", teacher2: "Dcns Aromashodu" },
+    { month: "June", date: "21/6/2026", teacher1: "Sis Ogunbowale", teacher2: "Sis Oloruntoba" },
+    { month: "June", date: "28/6/2026", teacher1: "Dcns Oloniyo", teacher2: "Sis Ebun" },
+
+    // JULY 2026
+    { month: "July", date: "5/7/2026", teacher1: "Sis Ogunjobi", teacher2: "Sis Esther" },
+    { month: "July", date: "12/7/2026", teacher1: "Dcn Adu", teacher2: "Sis Tosin" },
+    { month: "July", date: "19/7/2026", teacher1: "Sis Olusoji", teacher2: "Dcns Aromashodu" },
+    { month: "July", date: "26/7/2026", teacher1: "Sis Ogunbowale", teacher2: "Sis Oloruntoba" },
+
+    // AUGUST 2026
+    { month: "August", date: "2/8/2026", teacher1: "Dcns Oloniyo", teacher2: "Sis Ebun" },
+    { month: "August", date: "9/8/2026", teacher1: "Sis Ogunjobi", teacher2: "Sis Esther" },
+    { month: "August", date: "16/8/2026", teacher1: "Dcn Adu", teacher2: "Sis Tosin" },
+    { month: "August", date: "23/8/2026", teacher1: "Sis Olusoji", teacher2: "Dcns Aromashodu" },
+    { month: "August", date: "30/8/2026", teacher1: "Sis Ogunbowale", teacher2: "Sis Oloruntoba" },
+
+    // SEPTEMBER 2026
+    { month: "September", date: "6/9/2026", teacher1: "Dcns Oloniyo", teacher2: "Sis Ebun" },
+    { month: "September", date: "13/9/2026", teacher1: "Sis Ogunjobi", teacher2: "Sis Esther" },
+    { month: "September", date: "20/9/2026", teacher1: "Dcn Adu", teacher2: "Sis Tosin" },
+    { month: "September", date: "27/9/2026", teacher1: "Sis Olusoji", teacher2: "Dcns Aromashodu" },
+
+    // OCTOBER 2026
+    { month: "October", date: "4/10/2026", teacher1: "Sis Ogunbowale", teacher2: "Sis Oloruntoba" },
+    { month: "October", date: "11/10/2026", teacher1: "Dcns Oloniyo", teacher2: "Sis Ebun" },
+    { month: "October", date: "18/10/2026", teacher1: "Sis Ogunjobi", teacher2: "Sis Esther" },
+    { month: "October", date: "25/10/2026", teacher1: "Dcn Adu", teacher2: "Sis Tosin" },
+
+    // NOVEMBER 2026
+    { month: "November", date: "1/11/2026", teacher1: "Sis Olusoji", teacher2: "Dcns Aromashodu" },
+    { month: "November", date: "8/11/2026", teacher1: "Sis Ogunbowale", teacher2: "Sis Oloruntoba" },
+    { month: "November", date: "15/11/2026", teacher1: "Dcns Oloniyo", teacher2: "Sis Ebun" },
+    { month: "November", date: "22/11/2026", teacher1: "Sis Ogunjobi", teacher2: "Sis Esther" },
+    { month: "November", date: "29/11/2026", teacher1: "Dcn Adu", teacher2: "Sis Tosin" },
+
+    // DECEMBER 2026
+    { month: "December", date: "6/12/2026", teacher1: "Sis Olusoji", teacher2: "Dcns Aromashodu" },
+    { month: "December", date: "13/12/2026", teacher1: "Sis Ogunbowale", teacher2: "Sis Oloruntoba" },
+    { month: "December", date: "20/12/2026", teacher1: "Dcns Oloniyo", teacher2: "Sis Ebun" },
+    { month: "December", date: "27/12/2026", teacher1: "Sis Ogunjobi", teacher2: "Sis Esther" }
+];
   
   export default teachersRosterData;
   
