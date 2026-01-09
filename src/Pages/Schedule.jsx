@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import ProgramRoster from "../components/ProgramRooster/ProgramRoster";
 import CleaningRoster from "../components/CleaningRoster/CleaningRoster";
 import TeachersRoster from "../components/TeacherRoster/TeachersRoster.jsx"
-import teachersData from "../data/teachersData.js"
+import { firstHalfRoster, secondHalfRoster } from './data/teachersData';
 
 export default function Schedule() {
   const [children, setChildren] = useState([]);
