@@ -102,8 +102,8 @@ export default function Schedule() {
 
         {/* 3. PROP FIX: Passing firstHalf and secondHalf correctly */}
         {activeTab === "teachers" && (
-          <TeachersRoster firstHalf={firstHalfRoster} secondHalf={secondHalfRoster} />
-        )}
+  <TeachersRoster firstHalf={firstHalfRoster} secondHalf={secondHalfRoster} />
+)}
       </div>
     </div>
   );
