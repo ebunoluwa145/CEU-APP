@@ -108,7 +108,7 @@ export default function Schedule() {
         <div>
           {activeTab === "program" && <ProgramRoster roster={programRoster} />}
           {activeTab === "cleaning" && <CleaningRoster roster={cleaningRoster} />}
-          {activeTab === "teachers" && <TeachersRoster roster={teachersData} />}
+          {activeTab === "teachers" && <TeachersRoster firstHalf={firstHalfRoster} secondHalf={secondHalfRoster} />}
         </div>
       )}
     </div>
