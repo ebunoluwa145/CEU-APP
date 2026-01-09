@@ -1,5 +1,5 @@
+// JANUARY - JUNE 2026
 export const firstHalfRoster = [
-    // JANUARY - JUNE 2026
     { month: "January", date: "4/1/2026", teacher1: "Dcns Oloniyo", teacher2: "Sis Ogunjobi" },
     { month: "January", date: "11/1/2026", teacher1: "Sis Oloruntoba", teacher2: "Dcn Adu" },
     { month: "January", date: "18/1/2026", teacher1: "Sis Esther", teacher2: "Sis Ebun" },
@@ -28,8 +28,8 @@ export const firstHalfRoster = [
     { month: "June", date: "28/6/2026", teacher1: "Dcns Oloniyo", teacher2: "Sis Ebun" }
 ];
 
+// JULY - DECEMBER 2026
 export const secondHalfRoster = [
-    // JULY - DECEMBER 2026
     { month: "July", date: "5/7/2026", teacher1: "Sis Ogunjobi", teacher2: "Sis Esther" },
     { month: "July", date: "12/7/2026", teacher1: "Dcn Adu", teacher2: "Sis Tosin" },
     { month: "July", date: "19/7/2026", teacher1: "Sis Olusoji", teacher2: "Dcns Aromashodu" },
