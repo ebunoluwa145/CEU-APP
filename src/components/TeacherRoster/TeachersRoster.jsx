@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 
 export default function TeachersRoster({ firstHalf, secondHalf }) {
   const [view, setView] = useState('H1');
-
   const activeRoster = view === 'H1' ? firstHalf : secondHalf;
 
+  // Grouping data by month
   const groupedRoster = activeRoster.reduce((acc, row) => {
     if (!acc[row.month]) acc[row.month] = [];
     acc[row.month].push(row);
@@ -13,7 +13,7 @@ export default function TeachersRoster({ firstHalf, secondHalf }) {
 
   return (
     <div className="p-4 bg-white min-h-screen">
-      {/* Switcher Buttons */}
+      {/* View Toggle */}
       <div className="flex justify-center mb-6">
         <div className="inline-flex rounded-md shadow-sm border-2 border-gray-300 p-1">
           <button
@@ -35,51 +35,54 @@ export default function TeachersRoster({ firstHalf, secondHalf }) {
         </div>
       </div>
 
-      {/* Table Container with strong borders */}
-      <div className="overflow-x-auto border-2 border-slate-400 rounded-sm shadow-sm">
+      {/* Table with Thick Month Separators */}
+      <div className="overflow-x-auto border-2 border-slate-800 rounded-sm">
         <table className="w-full border-collapse">
           <thead>
-            <tr className="bg-orange-500 text-white">
-              {/* Thicker vertical lines using border-r-2 */}
-              <th className="px-4 py-3 border-r-2 border-white text-center text-sm font-bold uppercase w-24">Month</th>
-              <th className="px-4 py-3 border-r-2 border-white text-center text-sm font-bold uppercase w-32">Date</th>
-              <th className="px-4 py-3 border-r-2 border-white text-center text-sm font-bold uppercase">Teacher 1</th>
+            <tr className="bg-orange-500 text-white border-b-2 border-slate-800">
+              <th className="px-4 py-3 border-r-2 border-slate-800 text-center text-sm font-bold uppercase w-24">Month</th>
+              <th className="px-4 py-3 border-r-2 border-slate-800 text-center text-sm font-bold uppercase w-32">Date</th>
+              <th className="px-4 py-3 border-r-2 border-slate-800 text-center text-sm font-bold uppercase">Teacher 1</th>
               <th className="px-4 py-3 text-center text-sm font-bold uppercase">Teacher 2</th>
             </tr>
           </thead>
           <tbody>
             {Object.entries(groupedRoster).map(([month, rows]) =>
-              rows.map((row, index) => (
-                <tr key={`${month}-${index}`} className="border-b-2 border-slate-300">
-                  {/* Month column with rowSpan and thick right border */}
-                  {index === 0 && (
-                    <td 
-                      rowSpan={rows.length} 
-                      className="bg-slate-100 px-4 py-4 text-center font-bold text-gray-800 border-r-2 border-slate-400 align-middle"
-                    >
-                      {month}
+              rows.map((row, index) => {
+                // Check if this is the last row of the current month
+                const isLastRowOfMonth = index === rows.length - 1;
+
+                return (
+                  <tr 
+                    key={`${month}-${index}`} 
+                    className={`
+                      ${isLastRowOfMonth ? 'border-b-4 border-slate-900' : 'border-b border-slate-300'}
+                    `}
+                  >
+                    {index === 0 && (
+                      <td 
+                        rowSpan={rows.length} 
+                        className="bg-slate-100 px-4 py-4 text-center font-bold text-gray-900 border-r-2 border-slate-800 align-middle uppercase"
+                      >
+                        {month}
+                      </td>
+                    )}
+                    <td className="px-4 py-3 text-sm text-gray-700 border-r-2 border-slate-300 font-medium">
+                      {row.date}
                     </td>
-                  )}
-                  {/* Individual cells with vertical dividers */}
-                  <td className="px-4 py-3 text-sm text-gray-700 border-r-2 border-slate-300 font-medium whitespace-nowrap">
-                    {row.date}
-                  </td>
-                  <td className="px-4 py-3 text-sm text-gray-800 border-r-2 border-slate-300 font-semibold">
-                    {row.teacher1}
-                  </td>
-                  <td className="px-4 py-3 text-sm text-gray-800 font-semibold">
-                    {row.teacher2}
-                  </td>
-                </tr>
-              ))
+                    <td className="px-4 py-3 text-sm text-gray-800 border-r-2 border-slate-300 font-semibold">
+                      {row.teacher1}
+                    </td>
+                    <td className="px-4 py-3 text-sm text-gray-800 font-semibold">
+                      {row.teacher2}
+                    </td>
+                  </tr>
+                );
+              })
             )}
           </tbody>
         </table>
       </div>
-      
-      <p className="mt-4 text-xs text-gray-400 italic text-center">
-        Showing roster for {view === 'H1' ? 'First' : 'Second'} Half of 2026
-      </p>
     </div>
   );
 }
